@@ -48,4 +48,3 @@ repos:
       - id: bandit
         args: [--recursive]
         files: setup.py
-
