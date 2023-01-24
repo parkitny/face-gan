@@ -1,0 +1,10 @@
+name: fg
+channels:
+  - conda-forge
+dependencies:
+  - python=3.10
+  - pip
+  - cudatoolkit=11.6
+  - cudnn=8.*
+  - pip:
+    - -r requirements.txt
