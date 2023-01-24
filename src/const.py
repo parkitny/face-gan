@@ -1,0 +1,7 @@
+ATTR_KEY = "attributes"
+IMAGE_KEY = "image"
+LABEL_KEY = "Smiling"
+GROUP_KEY = "Young"
+TEST = "test"
+TRAIN = "train"
+VAL = ""

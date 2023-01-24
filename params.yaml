@@ -1,0 +1,12 @@
+paths:
+  train: "data/train"
+  val: "data/val"
+  test: "data/test"
+
+data:
+  image_size: 28
+  celeb_a:
+    name: "celeb_a"
+    version: 2.0.0
+    shards: 2 # Pre-defined from the dataset.
+    url: "gs://celeb_a_dataset/"
