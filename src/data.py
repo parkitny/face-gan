@@ -102,7 +102,9 @@ def get_data(ctx, download=False):
 
 def get_dataloader(ctx, download=False):
     celeb_a_builder, get_image_and_label = get_data(ctx, download=download)
-    dataloader = celeb_a_train_data_wo_group(ctx, ctx.train.batch_size, celeb_a_builder, get_image_and_label)
+    dataloader = celeb_a_train_data_wo_group(
+        ctx, ctx.train.batch_size, celeb_a_builder, get_image_and_label
+    )
     return dataloader
 
 

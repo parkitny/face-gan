@@ -14,5 +14,5 @@ def get_params(params_file=PARAMS):
 
 
 def set_seeds(seed):
-  np.random.seed(seed)
-  tf.compat.v1.set_random_seed(seed)
+    np.random.seed(seed)
+    tf.compat.v1.set_random_seed(seed)

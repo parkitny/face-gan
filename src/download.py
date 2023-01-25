@@ -4,6 +4,7 @@ from concurrent.futures import ProcessPoolExecutor, as_completed
 from tqdm import tqdm
 import os
 
+
 def _download(url: str, output_path: Path) -> None:
     fn = output_path / Path(url).name
     _ = urllib.request.urlretrieve(url, fn)

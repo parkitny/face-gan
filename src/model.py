@@ -4,6 +4,7 @@ import tempfile
 import os
 from src.conf import get_params
 
+
 def create_model(ctx):
     # For this notebook, accuracy will be used to evaluate performance.
     METRICS = [tf.keras.metrics.BinaryAccuracy(name="accuracy")]
@@ -14,15 +15,19 @@ def create_model(ctx):
     # 3. A single-unit readout layer to output real-scores instead of probabilities.
     model = keras.Sequential(
         [
-            keras.layers.Flatten(input_shape=(ctx.data.image_size, ctx.data.image_size, 3), name="image"),
+            keras.layers.Flatten(
+                input_shape=(ctx.data.image_size, ctx.data.image_size, 3), name="image"
+            ),
             keras.layers.Dense(64, activation="relu"),
             keras.layers.Dense(1, activation=None),
         ]
     )
 
     # TFCO by default uses hinge loss — and that will also be used in the model.
+
     model.compile(
-        optimizer=tf.keras.optimizers.Adam(0.001), loss="hinge", metrics=METRICS
+        optimizer=tf.keras.optimizers.Adam(0.001), loss={'dense_1': 'categorical_crossentropy', 
+                    'dense_1': 'hinge'}, metrics=METRICS
     )
     return model
 
