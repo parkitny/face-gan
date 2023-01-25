@@ -1,3 +1,5 @@
+seed: 42
+
 paths:
   train: "data/train"
   val: "data/val"
@@ -10,3 +12,6 @@ data:
     version: 2.0.0
     shards: 2 # Pre-defined from the dataset.
     url: "gs://celeb_a_dataset/"
+
+train:
+  batch_size: 2
