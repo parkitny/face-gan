@@ -14,4 +14,4 @@ data:
     url: "gs://celeb_a_dataset/"
 
 train:
-  batch_size: 2
+  batch_size: 512

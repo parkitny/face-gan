@@ -50,7 +50,6 @@ def celeb_a_train_data_wo_group(ctx, batch_size, celeb_a_builder, get_image_and_
     celeb_a_train_data = (
         celeb_a_builder.as_dataset(split="train")
         .shuffle(8)
-        .repeat()
         .batch(batch_size)
         .map(partial(preprocess_input_dict, size=ctx.data.image_size))
     )
@@ -61,7 +60,6 @@ def celeb_a_train_data_w_group(batch_size, celeb_a_builder, get_image_label_and_
     celeb_a_train_data = (
         celeb_a_builder.as_dataset(split="train")
         .shuffle(8)
-        .repeat()
         .batch(batch_size)
         .map(partial(preprocess_input_dict, size=ctx.data.image_size))
     )

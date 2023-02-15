@@ -2,3 +2,4 @@ tensorflow
 tensorflow-datasets
 munch~=2.5.0
 pyyaml~=6.0
+matplotlib~=3.7.0
